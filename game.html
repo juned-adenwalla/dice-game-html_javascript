@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Dice Game</title>
+</head>
+
+<style>
+    a{
+        padding: 5px 15px;
+        background-color: antiquewhite;
+        border: none;
+        text-decoration: none;
+        color: black;
+    }
+    div{
+        margin-top: 45px;
+    }
+</style>
+
+<body>
+    <a href="javascript:void(0)" onclick="dice()">Roll Dice</a>
+    <div id="result"></div>
+
+    <script>
+        function dice(){
+            document.getElementById('result').innerHTML='<img src="media/loader.gif">';
+            setTimeout(function(){
+            var random = Math.floor(Math.random()*6)+1;
+            document.getElementById('result').innerHTML="<img src='media/"+random+".png'/>";
+        }, 1000);
+    }
+    </script>
+
+</body>
+</html>
